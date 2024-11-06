@@ -1,9 +1,14 @@
 [tool.poetry]
 name = "sly"
-version = "0.1.0"
+version = "0.0.1"
 description = ""
 authors = ["All <allmacdev@gmail.com>"]
 readme = "README.md"
+packages = [{ include = "sly_cli" }]
+
+[tool.poetry.scripts]
+sly = "sly_cli.main:app"
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
