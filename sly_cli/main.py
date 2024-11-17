@@ -7,13 +7,10 @@ gi = __import__("req_gitignore")
 from rich import print
 from typer import Argument, Context, Exit, Option, Typer
 
-<<<<<<< Updated upstream
-=======
-from sly_cli.Bot import gemini
+from sly_cli.Bot import Gemini
 from sly_cli.req_gitignore import generate
 from sly_cli.ytdl import Ytdl
 
->>>>>>> Stashed changes
 app = Typer()
 
 __version__ = "0.0.1"
