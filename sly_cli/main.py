@@ -5,11 +5,6 @@ import sys
 from rich import print
 from typer import Argument, Context, Exit, Option, Typer
 
-
-from sly_cli.Bot import gemini
-from sly_cli.req_gitignore import generate
-
-
 from sly_cli.Bot import Gemini
 from sly_cli.req_gitignore import generate
 
