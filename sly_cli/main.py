@@ -91,7 +91,7 @@ def gitignore(lang: str = Argument(...), path: str = Argument(os.getcwd())):
 
 @app.command()
 def chat():
-    chatBot = gemini()
+    chatBot = Gemini()
     chatBot.Chat()
 
 
@@ -99,7 +99,7 @@ def chat():
 def cmd(
     cmd: str = Argument(..., help="descreva qual comando vc quer que ele te mostre")
 ):
-    cmdBot = gemini()
+    cmdBot = Gemini()
     system = get_system_info()
     if system["os_name"] == "Linux":
         prompt = f'me ajude a gerar um comando para o terminal {system["os_name"]} na distro {system["distro_name"]} para fazer o que estou pedindo entre aspas "{cmd}" com uma pequena explicação antes do que esse comando faz'
