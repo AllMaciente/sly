@@ -5,9 +5,15 @@ import sys
 from rich import print
 from typer import Argument, Context, Exit, Option, Typer
 
+
 from sly_cli.Bot import gemini
 from sly_cli.req_gitignore import generate
 
+
+from sly_cli.Bot import Gemini
+from sly_cli.req_gitignore import generate
+
+# from sly_cli.ytdl import Ytdl
 app = Typer()
 
 __version__ = "0.0.1"
@@ -107,6 +113,26 @@ def cmd(
 
     response = cmdBot.Msg(prompt)
     print(response)
+
+
+# @app.command()
+# def ytdl(
+#     url: str = Argument(...),
+#     highest: bool = Option(False, "--highest", "-h", "--maior"),
+#     lowest: bool = Option(False, "--lowest", "-l", "--menor"),
+#     audio: bool = Option(False, "--audio", "-a"),
+# ):
+#     if lowest == False or audio == False:
+#         highest = True
+
+#     Ytdl(url)
+
+#     if highest:
+#         Ytdl.Highest_resolution()
+#     elif lowest:
+#         Ytdl.Lowest_resolution()
+#     elif audio:
+#         Ytdl.Audio_only()
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ error_console = Console(stderr=True, style="bold red")
 console = Console()
 
 
-class gemini:
+class Gemini:
     def __init__(self):
         self.GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
         if not self.GOOGLE_API_KEY:
