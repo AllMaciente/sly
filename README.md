@@ -12,6 +12,76 @@
 Este repositório contém o código-fonte e os arquivos necessários para construir e instalar o pacote sly. O pacote pode ser instalado localmente ou via pipx a partir dos arquivos disponibilizados nos Releases.
 Requisitos
 
+</div>
+
+## Configuração da Chave API
+
+Antes de executar o chatbot, você precisa configurar sua chave API do [`Gemini`](https://aistudio.google.com/app/apikey). Escolha o método adequado para seu sistema operacional:
+
+### Linux/macOS
+
+#### Temporário (válido apenas para a sessão atual do terminal):
+
+```bash
+export GOOGLE_API_KEY='sua-chave-api'
+```
+
+#### Permanente:
+
+1. Abra o arquivo de configuração do seu shell:
+
+   - Para bash:
+
+   ```bash
+   nano ~/.bashrc
+   ```
+
+   - Para zsh:
+
+   ```bash
+   nano ~/.zshrc
+   ```
+
+2. Adicione a linha abaixo no final do arquivo:
+
+   ```bash
+   export GOOGLE_API_KEY='sua-chave-api'
+   ```
+
+3. Salve o arquivo e recarregue as configurações:
+   - Para bash:
+   ```bash
+   source ~/.bashrc
+   ```
+   - Para zsh:
+   ```bash
+   source ~/.zshrc
+   ```
+
+### Windows
+
+#### Temporário (via PowerShell):
+
+```powershell
+$env:GOOGLE_API_KEY = 'sua-chave-api'
+```
+
+#### Permanente (via Interface Gráfica):
+
+1. Pressione `Windows + R`
+2. Digite `sysdm.cpl` e pressione Enter
+3. Vá para a aba "Avançado"
+4. Clique em "Variáveis de Ambiente"
+5. Em "Variáveis do Sistema", clique em "Novo"
+6. Nome da variável: `GOOGLE_API_KEY`
+7. Valor da variável: `sua-chave-api`
+8. Clique em "OK" para salvar
+
+## Instalação do Pacote sly
+
+Este repositório contém o código-fonte e os arquivos necessários para construir e instalar o pacote sly. O pacote pode ser instalado localmente ou via pipx a partir dos arquivos disponibilizados nos Releases.
+Requisitos
+
     Python 3.10 ou superior
     pip ou pipx para gerenciamento de pacotes
 
@@ -38,6 +108,7 @@ git clone https://github.com/seu-usuario/sly.git
 cd sly
 
 Certifique-se de que o Poetry está instalado:
+
 pip install poetry
 
 Construa o pacote:
@@ -45,5 +116,17 @@ Construa o pacote:
     poetry build
 
 Os arquivos .whl e .tar.gz serão gerados na pasta dist/.
+      
 
-Isso deve cobrir tanto o caso de instalação pelo usuário final (usando os arquivos de Releases) quanto instruções para quem deseja construir o pacote manualmente.
+## Contribuindo
+
+Sinta-se à vontade para:
+
+- Reportar bugs
+- Sugerir melhorias
+- Enviar pull requests
+
+
+## Licença
+
+MIT License
